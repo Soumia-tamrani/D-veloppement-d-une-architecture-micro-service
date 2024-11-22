@@ -15,9 +15,9 @@ import java.util.List;
 public class Bill {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private Date BillingDate;
+    private Date billingDate;
     private long customerId ;
-    @OneToMany(mappedBy = "bil l")
+    @OneToMany(mappedBy = "bill")
     private List<ProductItem> productItems = new ArrayList<>();
     @Transient  private Customer customer;
 }
